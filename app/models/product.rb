@@ -2,7 +2,7 @@ class Product < ActiveRecord::Base
   validates :title, :presence=>true#, :uniqueness=>true
   validates :descrption, :presence=>true
   validates :image_url, :presence=>true, :format => {:with=> %r{\.(gif|jpg|png)$}i,:message => 'must be a URL for GIF, JPG or PNG image.',:multiline => true}
-  validates :price, :numericality => {:greater_than_or_equal_to => 0.01}, :length=> { in: 1..5 }
+  validates :price, :numericality => {:greater_than_or_equal_to => 0.01}, :length=> { maximum: 6 }
 
   default_scope { order(created_at: :desc) }
   #default_scope { where(title: 'lenovo') }
