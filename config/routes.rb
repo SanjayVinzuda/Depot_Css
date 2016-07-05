@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     
   end
 
+  # get 'list'=>'products#index'
+
   resources :products do
     get :who_bought, on: :member
   end

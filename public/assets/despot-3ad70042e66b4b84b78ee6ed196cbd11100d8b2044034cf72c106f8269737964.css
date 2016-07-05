@@ -1,0 +1,191 @@
+/* Styles for the cart in the sidebar */
+/* line 8, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#cart, #cart table {
+  font-size: smaller;
+  color: white;
+}
+
+/* line 13, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#cart table {
+  border-top: 1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
+}
+
+/* line 23, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+
+/* line 27, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store #notice {
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* line 37, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store h1 {
+  font: 150% sans-serif;
+  color: #526;
+  border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+/* line 45, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list table {
+  border-collapse: collapse;
+}
+
+/* line 49, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list table tr td {
+  padding: 50px;
+  vertical-align: top;
+}
+
+/* line 54, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_image {
+  width: 60px;
+  height: 70px;
+}
+
+/* line 59, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_description {
+  width: 60%;
+}
+
+/* line 63, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_description dl {
+  margin: 0;
+}
+
+/* line 67, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* line 73, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_description dd {
+  margin: 0;
+}
+
+/* line 77, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+
+/* line 83, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_line_even {
+  background: #e0f8f8;
+}
+
+/* line 87, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#product_list .list_line_odd {
+  background: #f8b0f8;
+}
+
+/* An entry in the store catalog */
+/* line 93, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+}
+
+/* line 99, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+/* line 104, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+/* line 112, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
+}
+
+/* line 118, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry p {
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+/* line 123, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry .price_line {
+  clear: both;
+  margin-bottom: 0.5em;
+}
+
+/* line 128, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry .add_to_cart {
+  position: relative;
+}
+
+/* line 132, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#store .entry .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+
+/* line 139, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman" , serif;
+  color: #282;
+  text-align: center;
+}
+
+/* line 148, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#banner img {
+  float: left;
+}
+
+/* line 151, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#columns {
+  background: #141;
+}
+
+/* line 154, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#main {
+  margin-left: 15em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+/* line 161, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+  background: #141;
+}
+
+/* line 170, /home/botree12/Desktop/depot/app/assets/stylesheets/despot.css.scss */
+#side a {
+  color: #bfb;
+  font-size: small;
+}

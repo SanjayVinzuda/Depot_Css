@@ -1,5 +1,5 @@
-
-<p id="notice"><%= notice %></p>
+<!-- 
+<p id="notice"><%#= notice %></p>
 
 <h1>Listing Line Items</h1>
 
@@ -13,6 +13,51 @@
   </thead>
 
   <tbody>
+    <%# @line_items.each do |line_item| %>
+      <tr>
+        <td><%#= line_item.product_id %></td>
+        <td><%#= line_item.cart_id %></td>
+        <td><%#= line_item.product.title %></td>
+        <td><%#= line_item.product.descrption %></td>
+
+        <td><%#= link_to 'Show', line_item %></td>
+        <td><%#= link_to 'Edit', edit_line_item_path(line_item) %></td>
+        <td><%#= link_to 'Destroy', line_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <%# end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Line item', new_line_item_path %>
+
+ -->
+
+<h1>Listing Users</h1>
+<%if notice%>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+
+<div class="container">
+  <div class="well">
+    <%= link_to "New Line item", new_line_item_path, class: "btn btn-info" %>
+  </div>
+  <div class="new-product"></div>
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Product</th>
+      <th>Cart</th>
+      <th>Product Title</th>
+      <th>Description</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+    <tbody class="product-index">
     <% @line_items.each do |line_item| %>
       <tr>
         <td><%= line_item.product_id %></td>
@@ -20,15 +65,17 @@
         <td><%= line_item.product.title %></td>
         <td><%= line_item.product.descrption %></td>
 
-        <td><%= link_to 'Show', line_item %></td>
-        <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>
-        <td><%= link_to 'Destroy', line_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '', line_item, class: "btn btn-danger glyphicon glyphicon-eye-open"  %></td>
+        <td><%= link_to '', edit_line_item_path(line_item), class: "btn btn-default glyphicon glyphicon-pencil"  %></td>
+        <td><%= link_to '', line_item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger glyphicon glyphicon-remove" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
 
-<br>
+    
+  </table>
+</div>
+<div id="product-modal" class="modal fade"></div>
 
-<%= link_to 'New Line item', new_line_item_path %>
+
 

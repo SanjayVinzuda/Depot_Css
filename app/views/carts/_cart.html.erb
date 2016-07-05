@@ -2,15 +2,12 @@
   <div class="cart_title"><code><%= t('.title')%></code></div>
   <table>
     <%=render (@cart.line_items)%>
-<%#=render 'line_items/line_item'%>
-
-<tr class="total_line">
-  <td colspan="2">Total</td>
-  <td class="total_cell"><%= number_to_currency(@cart.total_price)%></td>
-  
-</tr>
-
-</table>
+    <%#=render 'line_items/line_item'%>
+    <tr class="total_line">
+      <td colspan="2">Total</td>
+      <td class="total_cell"><%= number_to_currency(@cart.total_price)%></td>
+    </tr>
+  </table>
 
 
 <%= hidden_div_if( @hide_checkout_button == true ) do %>
