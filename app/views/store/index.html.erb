@@ -2,23 +2,95 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<%#=link_to 'My Cart', store_mycart_path ,  :class=> "btn btn-info"%>
-  <h1><%=t('.Title_items')%></h1>
+<!-- <%#=link_to 'My Cart', store_mycart_path ,  :class=> "btn btn-info"%>
+  <h1><%#=t('.Title_items')%></h1>
   <%# cache ['store', Product.latest] do %>
-   <% @product.each do |p|%>
+   <%# @product.each do |p|%>
    <%# cache ['entry', p] do %>
    <div class="entry">
       <%#= image_tag(p.image_url)%>
-      <%= link_to(image_tag(p.image_url),line_items_path(:product_id => p),html_options = {:method => :post}) %>
-    <h3><%= p.title %></h3>
-    <%= sanitize p.descrption %>
+      <%#= link_to(image_tag(p.image_url),line_items_path(:product_id => p),html_options = {:method => :post}) %>
+    <h3><%#= p.title %></h3>
+    <%#= sanitize p.descrption %>
     <div class="paper_line">
-      <span class="price"><%= sprintf("$%0.02f",p.price)%></span>
-      <!-- <span class="price"><%#= number_to_currency(p.price)%></span> -->
-      <p><%=button_to t('.add'), line_items_path(:product_id => p), :remote => true, :class=>"btn btn-info"%></p>
+      <span class="price"><%#= sprintf("$%0.02f",p.price)%></span>
+                                      <span class="price"><%#= number_to_currency(p.price)%></span> 
+      <p><%#=button_to t('.add'), line_items_path(:product_id => p), :remote => true, :class=>"btn btn-info"%></p>
     </div>
   </div>
   <%#end %>
   <%# end %>
-<% end %>
+<%# end %>
+ -->
 
+
+         
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="4.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <%c=1%>  <div class="row">
+                <% @product.each do |p|%>
+                <% if c>3%>
+                <%c=1%>
+                <div class="row">
+                <%else %>
+                <%c+=1%>
+                <%end%>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <%= link_to(image_tag(p.image_url),line_items_path(:product_id => p),html_options = {:method => :post}) %>
+                            <div class="caption">
+                                <h4 class="pull-right"><%= sprintf("$%0.02f",p.price)%></h4>
+                                <h4><a href="#"><%= p.title %></a>
+                                </h4>
+                                <p><%= sanitize p.descrption %></p>
+                                <p><%=button_to t('.add'), line_items_path(:product_id => p), :remote => true, :class=>"btn btn-info"%></p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                     <% if c>3%>
+               
+                  </div>
+                  <%end%>
+              <% end %>
+
+
+           

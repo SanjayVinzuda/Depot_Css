@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   http_basic_authenticate_with name: "sanjay", password: "sanjay"
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :cartid
+  skip_before_action :authorize , only: [:new]
+
 
 
   # GET /users

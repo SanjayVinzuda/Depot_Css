@@ -13,4 +13,6 @@
  *= require_tree .
  *= require_despot
  *= require_self
+ *= require_bootstrap
+ *= require_shop-homepage
  */

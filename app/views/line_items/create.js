@@ -3,7 +3,7 @@
 
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 
-$('#current_item').css({'background-color':'#55cc11'}).animate({'background-color':'#114411'}, 1000);
+$('#current_item').css({'background-color':'#334455'}).animate({'background-color':'#998877'}, 1000);
 
 
 
