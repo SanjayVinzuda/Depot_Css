@@ -65,9 +65,16 @@
             <p class="list-group-item">
               <%= Time.now.strftime("Time: %H:%M Date:%m/%h/%Y") %>
             </p>
+
+            <br/>
+            <video width="280" height="220" controls>
+              <source src="http://railscasts.com/episodes/415-upgrading-to-rails-4?autoplay=true" type="video/mp4">
+              <source src="http://railscasts.com/episodes/415-upgrading-to-rails-4?autoplay=true" type="video/ogg">
+            Your browser does not support the video tag.
+            </video> 
           </div>
         </div>
-        
+
         <div class="col-md-9">
           <%= yield %>
         </div>
